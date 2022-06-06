@@ -1,0 +1,22 @@
+<app-heading number="02." text="Work History"></app-heading>
+<div class="wrapper">
+    <div class="jobs">
+        <div (click)="changeJobs(i)" 
+            class="jobs-button" 
+            [ngClass]="{'selected' : job.active}" 
+            *ngFor="let job of jobs, let i = index"
+        >
+            <a >{{ job.company }}</a>
+        </div>
+    </div>
+    <div class="job-description">
+        <h4><span>{{ selected.role }} </span><span class="company">@ {{ selected.company }}</span> </h4>
+        <p class="when">{{ selected.when }}</p>
+        <div class="desc" *ngFor="let desc of selected.desc">
+            <div>
+                <span class="arrow right"></span>
+            </div>
+            <p>{{ desc }}</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,4 @@
+<app-heading number="03." text="Personal Projects"></app-heading>
+<div class="project-wrapper">
+    <app-project *ngFor="let project of projects; let i = index" [project]="project" [index]="i"></app-project>
+</div>

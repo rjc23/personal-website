@@ -1,0 +1,11 @@
+<div class="header">
+    <div></div>
+    <nav>
+        <div data-aos="fade-down" data-aos-duration="500" [attr.data-aos-delay]="getDelay(i)" *ngFor="let item of navItems; let i = index">
+            <a (click)="sendNotification(item.id)">
+                <span class="number">{{ item.number }}</span><span>{{ item.text }}</span>
+            </a>
+        </div>
+        <a data-aos="fade-left" data-aos-duration="500" data-aos-delay="1000" class="red-btn" href="/assets/resume.pdf">Resume</a>
+    </nav>
+</div>

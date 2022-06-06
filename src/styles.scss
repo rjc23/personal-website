@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+@import './colours.scss';
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: $blue;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, label, span {
+    font-family: 'Space Mono', sans-serif;
+    color: $white;
+}
+
+.red-btn {
+    padding: 12px;
+    border: solid 1px $red;
+    color: $red;
+    border-radius: 6px;
+    &:hover {
+        background-color: $grey;
+        border-color: $grey;
+        color: $black;
+    }
+}
+

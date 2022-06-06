@@ -1,0 +1,99 @@
+@import './../../colours.scss';
+@import './../../fonts.scss';
+@import './../../breakpoints.scss';
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 68px;
+    .jobs {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-bottom: 28px;
+        margin-left: -6px;
+        .jobs-button {
+            cursor: pointer;
+            width: 45%;
+            height: 70px;
+            background-color: $grey;
+            padding: 12px;
+            border-radius: 6px;
+            margin: 6px;
+            
+            a {
+                font-size: 14px;
+                color: $white;
+                text-align: center;
+            }
+            &:hover {
+                background-color: $grey;
+            }
+        }
+    }
+    .selected {
+        background-color: $red !important;
+    }
+
+    .job-description {
+        span {
+            font-family: $main;
+            &.company {
+                color: $red;
+            }
+        }
+        .when {
+            color: $grey;
+        }
+        .desc {
+            display: flex;
+            p {
+                margin-left: 18px;
+            }
+        }
+    }
+
+    .arrow {
+        border: solid $red;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 3px;
+      }
+      
+      .right {
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+      }
+
+      @include respond-to(tablet) {
+        flex-direction: row;
+        .jobs {
+            flex-direction: column;
+            margin-left: 0;
+            .jobs-button {
+                padding: 12px 24px;
+                border-left: solid 4px $grey;
+                width: 200px;
+                background-color: unset;
+                margin: 0;
+                box-shadow: unset;
+                border-radius: unset;
+                height: auto;
+            }
+        }
+        .job-description {
+            margin-left: 20px;
+        }
+        .selected {
+            border-left: solid 4px $red !important;
+            background-color: unset !important;
+            a {
+                color: $red !important;
+            }
+        }
+      }
+
+      @include respond-to(desktop) {
+
+      }
+}

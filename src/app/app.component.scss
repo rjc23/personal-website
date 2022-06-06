@@ -1,0 +1,19 @@
+@import './../breakpoints.scss';
+
+.wrapper {
+    margin: 0 25px;
+    .space {
+        margin-top: 250px;
+    }
+    .scrolloffset {
+        height: 100px;
+    }
+
+    @include respond-to(tablet) {
+        margin: 0 100px;
+    }
+
+    @include respond-to(desktop) {
+        margin: 0 225px;
+    }
+}

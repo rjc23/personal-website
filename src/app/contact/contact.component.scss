@@ -1,0 +1,15 @@
+@import './../../colours.scss';
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .button {
+        color: $red;
+        border: solid 1px $red;
+        text-decoration: none;
+        border-radius: 6px;
+        padding: 12px;
+    }
+}

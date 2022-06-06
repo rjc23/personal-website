@@ -1,0 +1,21 @@
+<div class="wrapper" [ngClass]="{ 'reverse' : isReverse }">
+    <div class="project">
+        <span class="featured">Featured Project</span>
+        <h3>{{ project.title }}</h3>
+        <br>
+        <div class="text">
+            <p *ngFor="let text of project.information">
+                {{ text }}
+            </p>
+        </div>
+        <br>
+        <div class="tech">
+            <span *ngFor="let tech of project.tech">
+                {{ tech }}&nbsp;
+            </span>
+        </div>
+    </div>
+    <div class="image">
+        <img src="./../../assets/{{project.imgSrc}}" alt="">
+    </div>
+</div>

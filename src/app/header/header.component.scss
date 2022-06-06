@@ -1,0 +1,25 @@
+@import './../../breakpoints.scss';
+@import './../../colours.scss';
+@import './../../fonts.scss';
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 0 68px;
+
+    nav {
+        display: flex;
+        align-items: center;
+        gap: 38px;
+        a {
+            text-decoration: none;
+            cursor: pointer;
+            .number {
+                color: $red;
+                font-size: 14px;
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+@import './../../colours.scss';
+@import './../../fonts.scss';
+
+.number {
+    font-size: 24px;
+    color: $red;
+    font-family: $mono;
+    margin-right: 12px;
+}
+
+.text {
+    font-family: $main;
+}

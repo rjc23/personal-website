@@ -1,0 +1,45 @@
+@import './../../colours.scss';
+@import './../../fonts.scss';
+@import './../../breakpoints.scss';
+.banner {
+    padding-top: 75px;
+    display: flex;
+
+    h1 {
+        font-size: 16px;
+        color: $red;
+        padding-left: 3px;
+    }
+
+    h2 {
+        font-family: $main;
+        font-size: 32px;
+        color: $white;
+    }
+    h3 {
+        font-family: $main;
+        font-size: 32px;
+        color: $grey;
+        margin-bottom: 32px;
+    }
+    p {
+        color: $white;
+    }
+
+    @include respond-to(tablet) {
+        h2 {
+            font-size: 64px;
+        }
+        h3 {
+            font-size: 64px;
+        }
+        p {
+            width: 60%;
+        }
+    }
+
+    @include respond-to(desktop) {
+        
+    }
+
+}
