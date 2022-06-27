@@ -18,11 +18,11 @@ export class SocialsComponent implements OnInit {
       imgSrc: "linkedin.png",
       link: "https://www.linkedin.com/in/ryanjcarmody/"
     },
-    {
-      name: "Twitter",
-      imgSrc: "twitter.png",
-      link: "https://twitter.com"
-    },
+    // {
+    //   name: "Twitter",
+    //   imgSrc: "twitter.png",
+    //   link: "https://twitter.com"
+    // },
     {
       name: "YouTube",
       imgSrc: "youtube.png",

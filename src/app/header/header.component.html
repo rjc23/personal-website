@@ -1,11 +1,41 @@
 <div class="header">
     <div></div>
-    <nav>
+    <nav class="desktop">
         <div data-aos="fade-down" data-aos-duration="500" [attr.data-aos-delay]="getDelay(i)" *ngFor="let item of navItems; let i = index">
-            <a (click)="sendNotification(item.id)">
+            <a *ngIf="!item.href" (click)="sendNotification(item.id)">
                 <span class="number">{{ item.number }}</span><span>{{ item.text }}</span>
             </a>
+            <a *ngIf="item.href" [attr.href]="item.href">
+                <span class="number">{{ item.number }}</span><span>{{ item.text }}</span>
+            </a>
+
         </div>
         <a data-aos="fade-left" data-aos-duration="500" data-aos-delay="1000" class="red-btn" href="/assets/resume.pdf">Resume</a>
+    </nav>
+    <nav class="mobile">
+        <a (click)="toggleBurger()" [ngClass]="{ 'open' : burgerOpen }" id="nav-icon4">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+        <div *ngIf="burgerOpen" class="mobile-box" data-aos="fade-in" data-aos-duration="500">
+            <div class="links" *ngFor="let item of navItems; let i = index">
+                <a *ngIf="!item.href" (click)="sendNotification(item.id)">
+                    <span class="number">{{ item.number }}</span>
+                    <br>
+                    <span>{{ item.text }}</span>
+                    <br>
+                    <br>
+                </a>
+                <a *ngIf="item.href" [attr.href]="item.href">
+                    <span class="number">{{ item.number }}</span>
+                    <br>
+                    <span>{{ item.text }}</span>
+                    <br>
+                    <br>
+                </a>
+            </div>
+            <a class="resume" href="/assets/resume.pdf" target="_blank">Resume</a>
+        </div>
     </nav>
 </div>

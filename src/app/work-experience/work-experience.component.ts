@@ -10,13 +10,13 @@ export class WorkExperienceComponent {
   jobs = [
     {
       active: false,
-      company: "Your Company",
+      company: "Dream job",
       role: "Web Developer",
       when: "Soon - Future",
       desc: [
-        "Making kick ass web applications",
-        "Being part of cross-functional team",
-        "Being a banter-saurous Rex."
+        "Working hard contributing to a clean code base, utilising a modern tech stack",
+        "Contributing to the full stack",
+        "Participating in code reviews, planning sessions etc."
       ]
     },
     {
@@ -49,7 +49,13 @@ export class WorkExperienceComponent {
       desc: [
         "Created Adelaide's first tips based walking tour",
         "Showed over 6000 people from over 50 countries around the city",
-        "Managed all aspects of the business, including the website, bookings, accounting, marketing etc."
+        "Managed all aspects of the business, including the website, bookings, accounting, marketing etc.",
+      ],
+      links: [
+        {
+          text: "Check out my TripAdvisor reviews",
+          link: "https://www.tripadvisor.com.au/Attraction_Review-g255093-d11817226-Reviews-Tours_Around_Adelaide-Adelaide_Greater_Adelaide_South_Australia.html"
+        }
       ]
     },
   ]

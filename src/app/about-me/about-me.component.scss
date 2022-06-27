@@ -36,10 +36,13 @@
     @include respond-to(tablet) {
         flex-direction: row;
         align-items: unset;
-        p {
+        justify-content: space-between;
+        margin-top: 30px;
+        .text {
             width: 60%;
-            margin-right: 100px;
-            margin-bottom: 16px;
+            p {
+                margin-bottom: 16px;
+            }
         }
 
         .image {

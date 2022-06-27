@@ -7,19 +7,149 @@
     justify-content: space-between;
     align-items: center;
     height: 80px;
-    padding: 0 68px;
+    padding: 0 28px;
 
-    nav {
-        display: flex;
+    .desktop {
         align-items: center;
         gap: 38px;
+        display: none;
         a {
             text-decoration: none;
+            font-size: 14px;
             cursor: pointer;
             .number {
                 color: $red;
-                font-size: 14px;
+                font-size: 12px;
             }
         }
     }
+    .mobile {
+      position: relative;
+      .mobile-box {
+        z-index: 10;
+        right: 0;
+        padding: 30px 60px;
+        margin-top: 10px;
+        position: absolute;
+        background-color: $red;
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        a {
+          cursor: pointer;
+          text-decoration: none;
+
+          &.resume {
+            text-align: center;
+            padding: 12px;
+            border: solid 1px $blue;
+            color: $blue;
+            text-decoration: none;
+            cursor: pointer;
+            border-radius: 6px;
+            &:hover {
+              background-color: $blue;
+              color: $white;
+            }
+          }
+        }
+
+        .links {
+          .number {
+            color: $blue;
+          }
+        }
+
+      }
+    }
+
+    @include respond-to(tablet) {
+      .mobile {
+        display: none;
+      }
+      .desktop {
+        display: flex;
+      }
+      padding: 0 68px;
+    }
+}
+
+
+
+#nav-icon4 {
+  display: flex;
+  width: 30px;
+  height: 22.5px;
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+#nav-icon1 span, #nav-icon3 span, #nav-icon4 span {
+  display: block;
+  position: absolute;
+  height: 5px;
+  width: 100%;
+  background: $red;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+#nav-icon4 span:nth-child(1) {
+  top: 0px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+#nav-icon4 span:nth-child(2) {
+  top: 10px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+#nav-icon4 span:nth-child(3) {
+  top: 20px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+#nav-icon4.open span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: -1px;
+}
+
+#nav-icon4.open span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+#nav-icon4.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }

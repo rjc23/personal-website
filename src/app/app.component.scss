@@ -16,4 +16,10 @@
     @include respond-to(desktop) {
         margin: 0 225px;
     }
+
+    .footer {
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+    }
 }

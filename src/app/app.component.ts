@@ -11,6 +11,7 @@ export class AppComponent implements OnInit {
   @ViewChild('aboutme') about!: ElementRef;
   @ViewChild('workexp') workexp!: ElementRef;
   @ViewChild('projects') projects!: ElementRef;
+  @ViewChild('contact') contact!: ElementRef;
 
   constructor(private scroller: ViewportScroller) {}
 
@@ -39,7 +40,7 @@ export class AppComponent implements OnInit {
   ]
 
   getNotification(el:any) {
-    this.scroller.setOffset([0, 150]);
+    this.scroller.setOffset([0, 50]);
     switch(el) {
       case "about":
         this.scroller.scrollToAnchor("about");
@@ -49,6 +50,9 @@ export class AppComponent implements OnInit {
         break;
       case "projects":
         this.scroller.scrollToAnchor("projects")
+        break;
+      case "contact":
+        this.scroller.scrollToAnchor("contact")
         break;
     }
   }

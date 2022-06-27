@@ -1,21 +1,27 @@
 @import './../../colours.scss';
 @import './../../fonts.scss';
-
-.reverse {
-    flex-direction: row-reverse;
-    .image {
-        padding-left: 0 !important;
-        padding-right: 30px;
-    }
-}
+@import './../../breakpoints.scss';
 
 .wrapper {
     display: flex;
+    align-items: center;
+    flex-direction: column;
     width: 100%;
     .project {
-        width: 50%;
-        h3 {
-            font-family: $main;
+        .title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            h3 {
+                font-family: $main;
+                margin: 0;
+            }
+            img {
+                width: 18px;
+                height: 18px;
+                opacity: 0.7;
+                margin-bottom: 2px;
+            }
         }
         .featured {
             color: $red;
@@ -30,12 +36,31 @@
         }
     }
     .image {
-        width: 50%;
-        padding-left: 30px;
+        margin-top: 24px;
         img {
             width: 100%;
             border-radius: 12px;
             box-shadow: 0px 0px 12px 0px rgb(255 255 255 / 20%);
+        }
+    }
+
+}
+@include respond-to(tablet) {
+    .wrapper {
+        flex-direction: row;
+        .project {
+            width: 50%;  
+        }
+        .image {
+            width: 50%;
+            padding-left: 30px;
+        }
+    }
+    .reverse {
+        flex-direction: row-reverse;
+        .image {
+            padding-left: 0 !important;
+            padding-right: 30px;
         }
     }
 }

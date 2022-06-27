@@ -8,28 +8,100 @@ import { Component } from '@angular/core';
 export class ProjectsComponent {
   projects = [
     {
-      title: "Retro Snake",
-      imgSrc: "retrosnake.png",
+      title: "GAMES.ryancarmody",
+      imgSrc: "games.png",
+      links: [
+        {
+          name: "github",
+          icon: "github.png",
+          link: "https://github.com/rjc23/games-two"
+        },
+        {
+          name: "webiste",
+          icon: "link.png",
+          link: "https://games.ryancarmody.dev"
+        }
+      ],
       information: [
-        "I loved this game back in the day. I would always ask my Dad if I could borrow his Nokia phone so I could play.",
-        "I had been learning more about building reactive apps with RxJS in Angular, using the async pipe to subscribe to state. This was my attempt at building a completely reactive Angular application."
+        "A place to find all the game I have made. Can now link games I have made back here. First time in a while making a website in a framework other than Angular 2+.",
+      ],
+      tech: [
+        "Nuxt.js",
+        "Vercel hosting",
+        "Subdomains",
+        "CSS animations",
+        "Server side rendering"
+      ]
+    },
+    {
+      title: "Worldle",
+      imgSrc: "worldle.png",
+      links: [
+        {
+          name: "github",
+          icon: "github.png",
+          link: "https://github.com/rjc23/worldle"
+        },
+        {
+          name: "webiste",
+          icon: "link.png",
+          link: "https://playworldle.com"
+        }
+      ],
+      information: [
+        "The game where you get six guesses to try and guess which country it is. Choose from 3 game modes.",
       ],
       tech: [
         "Angular",
         "RxJS",
-        "Firebase hosting"
+        "Firebase hosting",
+        "State management",
+        "SCSS"
+      ]
+    },
+    {
+      title: "Retro Snake",
+      imgSrc: "retrosnake.png",
+      links: [
+        {
+          name: "github",
+          icon: "github.png",
+          link: "https://github.com/rjc23/snake"
+        },
+        {
+          name: "webiste",
+          icon: "link.png",
+          link: "https://playretrosnake.com"
+        }
+      ],
+      information: [
+        "A completely reactive Angular app of the famous Nokia snake. I really got a chance to refine my RxJS and state management skills in this project.",
+      ],
+      tech: [
+        "Angular",
+        "RxJS",
+        "Firebase hosting",
+        "State management"
       ]
     },
     {
       title: "Odds Pony",
       imgSrc: "oddspony.png",
+      links: [
+        {
+          name: "webiste",
+          icon: "link.png",
+          link: "https://oddspony.com"
+        }
+      ],
       information: [
-        "I wanted a project where I could handle thousands of points of data.",
-        "I came across an odds API and looked into what I could do with it. I make a commission every time someone buys an API key."
+        "This is a site that scans thousands of betting odds and presents meaningful analytics.",
+        "I created this end to end with an Angular front end, Node.js backend, MongoDB for the database. "
       ],
       tech: [
         "Angular",
         "RxJS",
+        "MongoDB",
         "Firebase hosting",
         "Stripe API",
         "Sendgrid API",
@@ -40,9 +112,16 @@ export class ProjectsComponent {
     {
       title: "Your Budget Summary",
       imgSrc: "yourbudgetsummary.png",
+      links: [
+        {
+          name: "webiste",
+          icon: "link.png",
+          link: "https://yourbudgetsummary.com"
+        }
+      ],
       information: [
-        "My first personal project in Angular",
-        "I wanted to build something with forms and state management."
+        "This was my first personal project using a JavaScript framework. It is a website that takes in your income and expenses and displays them in a meaningful way. ",
+        "I learnt a lot about forms and state management from this project."
       ],
       tech: [
         "Angular",

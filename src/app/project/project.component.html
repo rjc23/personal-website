@@ -1,7 +1,14 @@
 <div class="wrapper" [ngClass]="{ 'reverse' : isReverse }">
     <div class="project">
         <span class="featured">Featured Project</span>
-        <h3>{{ project.title }}</h3>
+        <div class="title">
+            <h3>{{ project.title }}</h3>
+            <div *ngFor="let link of project.links">
+                <a [attr.href]="link.link" target="_blank">
+                    <img [src]="'./../../assets/'+link.icon" alt="">
+                </a>
+            </div>
+        </div>
         <br>
         <div class="text">
             <p *ngFor="let text of project.information">
