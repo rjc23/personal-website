@@ -23,7 +23,7 @@ export class ProjectsComponent {
         }
       ],
       information: [
-        "A place to find all the game I have made. Can now link games I have made back here. First time in a while making a website in a framework other than Angular 2+.",
+        "A website to display all of the games I have made. First time in a while making a website in a framework other than Angular 2+.",
       ],
       tech: [
         "Nuxt.js",
